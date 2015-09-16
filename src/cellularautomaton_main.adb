@@ -24,5 +24,10 @@ begin
 	GET(NumberToCheck);
 	PUT("Write a time: ");
 	GET(Time);
-	AutomatonLogic(NumberToCheck,(Time * 2 + 1));
+	IF NumberToCheck < 256 THEN
+		AutomatonLogic(NumberToCheck,(Time * 2 + 1));
+	ELSE
+		PUT("El número debe ser mayor a 0 y menor a 256");
+		New_Line;
+	END IF;
 end cellularautomaton_main;
